@@ -9,14 +9,7 @@ function App() {
 	const [list, setList] = useState([])
 	const [loading, setLoading] = useState(false)
 
-	const handleCheked = (name) => {
-		if (name) {
-			setUniver([
-				...saveUniver,
-				name
-			])
-		}
-	}
+
 
 	const handleClear = () => {
 		setSearch('')
@@ -66,7 +59,7 @@ function App() {
 							{list.map((el, index) =>
 								<Info
 									saveUniver={saveUniver}
-									handleCheked={handleCheked}
+
 									setUniver={setUniver}
 									index={index}
 									key={el.name}

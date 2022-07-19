@@ -9,10 +9,18 @@ export function Info(props) {
 		index,
 		saveUniver,
 		setUniver = Function.prototype,
-		handleCheked = Function.prototype
 	} = props
 
 	const findUniver = saveUniver.find(el => el === name)
+
+	const handleCheked = (name) => {
+		if (name) {
+			setUniver([
+				...saveUniver,
+				name
+			])
+		}
+	}
 
 	const delleteCheked = (name) => {
 		setUniver(saveUniver.filter(el => el !== name))
